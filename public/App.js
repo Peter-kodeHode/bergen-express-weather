@@ -40,7 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchImage();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  fetchWeather();
-  fetchImage();
-});
