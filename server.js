@@ -3,6 +3,18 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const apiKey = process.env.API_KEY;
+const cors = require(`cors`);
+
+app.use(cors({
+  
+  origin: 
+  [`https://localhost:3000`,
+  `https://peter-kodehode.github.io/bergen-express-weather/`],
+  credentials: true
+}));
+
+
+
 
 
 app.get("/weather", async (req, res) => {
