@@ -1,6 +1,10 @@
+const API_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3000' 
+  : 'https://bergen-express-weather-backend.onrender.com';
+
 
 function fetchWeather() {
-  fetch('/weather') 
+  fetch(`${API_URL}/weather`) 
     .then(response => response.json())
     .then(data => {
       const weatherTemp = data.properties.timeseries[0].data.instant.details.air_temperature;
@@ -16,7 +20,7 @@ function fetchWeather() {
 
 
 function fetchImage() {
-  fetch('/image') 
+  fetch(`${API_URL}/image`) 
     .then(response => response.json())
     .then(data => {
       const images = data.hits;

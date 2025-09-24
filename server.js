@@ -1,8 +1,21 @@
 require('dotenv').config();
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const apiKey = process.env.API_KEY;
+const cors = require(`cors`);
+
+app.use(cors({
+  
+  origin: 
+  [`http://localhost:3000`,
+    `http://127.0.0.1:3000`,
+  `https://peter-kodehode.github.io`],
+  credentials: true
+}));
+
+
+
 
 
 app.get("/weather", async (req, res) => {
