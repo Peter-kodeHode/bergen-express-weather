@@ -11,7 +11,6 @@ function fetchWeather() {
         data.properties.timeseries[0].data.instant.details.air_temperature;
       const weatherHumidity =
         data.properties.timeseries[0].data.instant.details.relative_humidity;
-
       const weatherInfoElement = document.querySelector(".weather-info");
       weatherInfoElement.innerHTML = `Det er nå <span>${weatherTemp}</span> grader i <span>Bergen</span>, med en luftfuktighet på <span>${weatherHumidity}%</span>`;
     })
@@ -29,9 +28,6 @@ function fetchImage() {
         const randomIndex = Math.floor(Math.random() * images.length);
         const randomImage = images[randomIndex];
 
-        // const imageElement = document.querySelector(".image-container img");
-        // imageElement.src = randomImage.largeImageURL;
-        // imageElement.alt = randomImage.tags;
         const backgroundContainer = document.querySelector(
           `.background-container`
         );

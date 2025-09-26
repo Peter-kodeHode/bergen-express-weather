@@ -25,29 +25,12 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: background-image 0.5s ease-in-out; /* Optional: smooth transition */
+  transition: background-image 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
-/* .image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 85vw;
-  margin: 1em;
-} */
-
-/* .image-container img {
-  max-height: 50vh;
-  border-radius: 50px;
-  border: white 5px solid;
-  box-shadow: black 5px 5px 5px 5px;
-} */
 
 .text-container {
   display: flex;
@@ -87,8 +70,5 @@ h1 {
 
   .text-container p {
     font-size: 1em;
-  }
-  .image-container img {
-    max-height: 20vh;
   }
 }
